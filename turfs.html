@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turfs Showcase - GreenField</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">GreenField</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="turfs.html">Turfs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="section" style="background-color: var(--card-bg); padding: 40px 0;">
+        <div class="container">
+            <h1 class="section-title" style="margin-bottom: 0;">Our Turfs Showcase</h1>
+        </div>
+    </header>
+
+    <!-- Gallery & Filter Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-btns">
+                <button class="filter-btn active" data-filter="all">All Turfs</button>
+                <button class="filter-btn" data-filter="football5">5-a-side Football</button>
+                <button class="filter-btn" data-filter="football7">7-a-side Football</button>
+                <button class="filter-btn" data-filter="cricket">Cricket</button>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="gallery-grid">
+                <!-- Turf 1 -->
+                <div class="gallery-item" data-category="football5">
+                    <img src="assets/images/turf1.webp" alt="5-a-side Football Turf">
+                    <div class="gallery-info">
+                        <h3>Arena 1 - 5v5</h3>
+                        <p>High-quality synthetic grass.</p>
+                    </div>
+                </div>
+                <!-- Turf 2 -->
+                <div class="gallery-item" data-category="football7">
+                    <img src="assets/images/turf2.jpg" alt="7-a-side Football Turf">
+                    <div class="gallery-info">
+                        <h3>Arena 2 - 7v7</h3>
+                        <p>Spacious field for bigger matches.</p>
+                    </div>
+                </div>
+                <!-- Turf 3 -->
+                <div class="gallery-item" data-category="cricket">
+                    <img src="assets/images/turf3.jpg" alt="Cricket Pitch">
+                    <div class="gallery-info">
+                        <h3>Cricket Nets</h3>
+                        <p>Professional bowling machine available.</p>
+                    </div>
+                </div>
+                <!-- Turf 4 -->
+                <div class="gallery-item" data-category="football5">
+                    <img src="assets/images/turf4.jpg" alt="5-a-side Indoor Turf">
+                    <div class="gallery-info">
+                        <h3>Indoor Arena - 5v5</h3>
+                        <p>Play regardless of the weather.</p>
+                    </div>
+                </div>
+                <!-- Turf 5 -->
+                <div class="gallery-item" data-category="cricket">
+                    <img src="assets/images/turf5.avif" alt="Open Cricket Ground">
+                    <div class="gallery-info">
+                        <h3>Open Box Cricket</h3>
+                        <p>Perfect for corporate tournaments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GreenField Turf Booking. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

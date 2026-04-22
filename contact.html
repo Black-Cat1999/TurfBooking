@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GreenField</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">GreenField</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="turfs.html">Turfs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container" style="max-width: 600px;">
+            <h1 class="section-title">Get in Touch</h1>
+            <p style="text-align: center; margin-bottom: 30px;">Have a question about group bookings, corporate events, or anything else? Send us a message!</p>
+            
+            <form id="contact-form" style="background-color: var(--card-bg); padding: 40px; border-radius: 10px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <div class="form-group">
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Your Email</label>
+                    <input type="email" id="contact-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="5" required></textarea>
+                    <!-- Live Character Counter -->
+                    <div id="char-counter" class="char-counter">0/200 characters</div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <h3>Need more info?</h3>
+                <p>Download our official brochure containing detailed turf dimensions, pricing, and rules.</p>
+                <!-- Resume Download equivalent -->
+                <a href="TurfBooking_Brochure.pdf" target="_blank" class="btn" style="background-color: transparent; border: 2px solid var(--primary-color); color: var(--text-color); margin-top: 10px;">View Brochure (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GreenField Turf Booking. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
