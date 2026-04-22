@@ -182,7 +182,7 @@ if (currencySelect && convertedPriceDisplay) {
 
 // --- API Integration ---
 // Set API Base URL (change to your Render URL when deploying)
-const API_BASE_URL = 'https://turfbooking-fqvr.onrender.com';
+const API_BASE_URL = 'https://turfbooking-fqvr.onrender.com/api';
 
 // 1. Submit Booking Form
 const bookingForm = document.getElementById('booking-form');
