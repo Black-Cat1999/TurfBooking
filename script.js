@@ -93,7 +93,7 @@ if (faqQuestions.length > 0) {
         question.addEventListener('click', () => {
             const faqItem = question.parentElement;
             const answer = faqItem.querySelector('.faq-answer');
-            
+
             // Toggle active class
             faqItem.classList.toggle('active');
 
@@ -115,7 +115,7 @@ if (messageInput && charCounter) {
     messageInput.addEventListener('input', () => {
         const currentLength = messageInput.value.length;
         charCounter.textContent = `${currentLength}/${MAX_CHARS} characters`;
-        
+
         if (currentLength > MAX_CHARS) {
             charCounter.style.color = 'red';
         } else {
@@ -154,17 +154,17 @@ if (currencySelect && convertedPriceDisplay) {
             // Using a free API (exchangerate-api)
             const response = await fetch('https://open.er-api.com/v6/latest/USD');
             const data = await response.json();
-            
+
             if (data && data.rates && data.rates[targetCurrency]) {
                 const rate = data.rates[targetCurrency];
                 const convertedPrice = (basePriceUSD * rate).toFixed(2);
-                
+
                 // Get currency symbol (basic implementation)
                 let symbol = targetCurrency;
-                if(targetCurrency === 'INR') symbol = '₹';
-                else if(targetCurrency === 'EUR') symbol = '€';
-                else if(targetCurrency === 'GBP') symbol = '£';
-                
+                if (targetCurrency === 'INR') symbol = '₹';
+                else if (targetCurrency === 'EUR') symbol = '€';
+                else if (targetCurrency === 'GBP') symbol = '£';
+
                 convertedPriceDisplay.textContent = `${symbol}${convertedPrice}`;
             } else {
                 convertedPriceDisplay.textContent = "Error fetching rate";
@@ -182,14 +182,14 @@ if (currencySelect && convertedPriceDisplay) {
 
 // --- API Integration ---
 // Set API Base URL (change to your Render URL when deploying)
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://turfbooking-fqvr.onrender.com';
 
 // 1. Submit Booking Form
 const bookingForm = document.getElementById('booking-form');
 if (bookingForm) {
     bookingForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const name = document.getElementById('name').value;
         const date = document.getElementById('date').value;
         const turfType = document.getElementById('turf-type').value;
@@ -204,7 +204,7 @@ if (bookingForm) {
             });
 
             const data = await response.json();
-            
+
             if (response.ok) {
                 alert('Booking Confirmed!');
                 bookingForm.reset();
@@ -224,7 +224,7 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const name = document.getElementById('contact-name').value;
         const email = document.getElementById('contact-email').value;
         const message = document.getElementById('message').value;
@@ -237,11 +237,11 @@ if (contactForm) {
             });
 
             const data = await response.json();
-            
+
             if (response.ok) {
                 alert('Message sent successfully!');
                 contactForm.reset();
-                if(document.getElementById('char-counter')) {
+                if (document.getElementById('char-counter')) {
                     document.getElementById('char-counter').textContent = `0/200 characters`;
                     document.getElementById('char-counter').style.color = 'var(--text-light)';
                 }
